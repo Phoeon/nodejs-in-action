@@ -11,6 +11,7 @@
 //     createTime : { type: Date, default: Date.now }
 // });
 // exports.Emp = mongoose.model("emps",emp);
+Date.phoeon=321;
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema; //创建模型
 var empSchema = new Schema({

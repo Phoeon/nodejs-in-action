@@ -72,7 +72,9 @@
             <td><%= emp.name %></td>
             <td><%= emp.age %></td>
             <td><%= emp.deptno %></td>
-            <td><%= emp.createTime %></td>
+            <td><%= locals.dateFmt(emp.createTime,"yyyy-MM-dd hh:mm:ss") %></td>
+           <!-- <td><%= emp.createTime %></td> -->
+            <!-- <td>new Date().toFmtString("yyyy-MM-dd hh:mm:ss")</td> -->
             <td><a href="/del?id=<%= emp._id %>">删除</a> | <a href="/modify?id=<%= emp._id %>">修改</a></td>
         </tr>
         <% }); %>
@@ -81,6 +83,7 @@
 </div>
 </body>
 <script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/phoeon-utils.js"></script>
 <script src="/javascripts/bootstrap.min.js"></script>
 </html>
 
